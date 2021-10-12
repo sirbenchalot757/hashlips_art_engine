@@ -5,20 +5,21 @@ const isLocal = typeof process.pkg === "undefined";
 const basePath = isLocal ? process.cwd() : path.dirname(process.execPath);
 const { MODE } = require(path.join(basePath, "src/blendMode.js"));
 const description =
-  "This is the description of your NFT project, remember to replace this";
-const baseUri = "ipfs://NewUriToReplace";
+  "Nifty Narwhal is a community-run creative studio that empowers creative enthusiasts to influence the art with which we engage. 10,000 unique Ethereum-based tokens will function as membership passes, granting access to creative contributions and joint ownership of our group's works. The Nifty Narwhals Creative Studio was formed to collaborate on media projects with hundreds of participants and to give ownership of our collective works.s";
+const baseUri = "ipfs://QmUGhRbtuQQijbL8tUE4uY5MZQA3qXyL6DE445LhazCyKj";
 
 const layerConfigurations = [
   {
-    growEditionSizeTo: 10,
+    growEditionSizeTo: 50,
     layersOrder: [
       { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "Body" },
+      { name: "Clothes" },
+      { name: "Eyes" },
+      { name: "Eyewear" },
+      { name: "Hats" },
+      { name: "Mouth" },
+      { name: "Tusks" },
     ],
   },
 ];
@@ -28,8 +29,8 @@ const shuffleLayerConfigurations = false;
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 800,
+  height: 800,
 };
 
 const background = {
@@ -44,8 +45,8 @@ const rarityDelimiter = "#";
 const uniqueDnaTorrance = 10000;
 
 const preview = {
-  thumbPerRow: 5,
-  thumbWidth: 50,
+  thumbPerRow: 1,
+  thumbWidth: 250,
   imageRatio: format.width / format.height,
   imageName: "preview.png",
 };
